@@ -256,6 +256,26 @@ margin-top: 0;
     color:#fff ;
 }
 
+
+.footer{
+    background:var(--light-yellow);
+}
+.footer .box-container{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(25rem , 1rem));
+gap: 22px;
+}
+footer .box-container .box h3{
+    color: black;
+    font-size: 42px;
+    padding: 16px 0;
+}
+.footer .box-container .box a{
+    color: black;
+    font-size: 40px;
+    padding: 16px 0;
+    display: block;
+}
 .vehicles .vehicles-slider{
     padding-bottom:80px ;
     
@@ -300,26 +320,6 @@ font-weight: normal;
     border-top: var(--border);
     color: var(--light-color);
 }
-.footer{
-    background:var(--light-yellow);
-}
-.footer .box-container{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(25rem , 1rem));
-gap: 22px;
-}
-footer .box-container .box h3{
-    color: black;
-    font-size: 42px;
-    padding: 16px 0;
-}
-.footer .box-container .box a{
-    color: black;
-    font-size: 40px;
-    padding: 16px 0;
-    display: block;
-}
-
 
 #newLoginButton{
     font-size: 20px;
@@ -345,7 +345,6 @@ footer .box-container .box h3{
     z-index: 1000;
     background-color: black;
 }
-
 
 
 @media(max-width:991px){

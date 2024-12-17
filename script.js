@@ -32,5 +32,23 @@ document.querySelector('a[href="#footer"]').addEventListener('click', function (
     e.preventDefault(); // Prevent the default jump behavior
     document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
 });
+  // Smooth scrolling for internal links
+  $('a.nav-link').on('click', function(event) {
+    event.preventDefault(); // Prevent default anchor click behavior
+    const target = $(this).attr('href'); // Get the target link
+    if (target.startsWith('#')) {
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 1000); // Smooth scroll to the target
+    } else {
+        // Alert for external links
+        alert('You are navigating to: ' + target);
+        window.open(target, '_blank'); // Open external link in a new tab
+    }
+})
 
-   
+document.getElementById('toggleMode').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode'); // Toggle dark mode class
+    const mode = document.body.classList.contains('dark-mode') ? 'Dark' : 'Light';
+    alert('Switched to ' + mode + ' Mode'); // Alert the user
+});
